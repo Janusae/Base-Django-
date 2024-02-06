@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% for d in data %}
+
+
+                                                       <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">{{ d.title }}</h4>
+                                 <p class="price_text">Price  <span style="color: #262626;">$ {{ d.price }}</span></p>
+                                 <div class="tshirt_img"><img src="static/images/{{ d.link_img }}"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="{{ d.slug }}">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="{{ d.slug }}">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+
+
+
+{% endfor %}
+
+{% endblock %}
