@@ -19,4 +19,15 @@ def get(request , slug):
     })
 
 def login(request):
-    return redirect(reverse("login"))
+    return redirect(reverse("get"))
+
+def contact(request):
+    return redirect(reverse("contact_us"))
+
+def about(request):
+    return render(request , "home/about.html")
+
+def product(request):
+    return render(request , "home/products.html" , {
+        "data" : show
+    })

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "product/css.css" %}">
+</head>
+<body>
+<html>
+
+<head>
+  <title>Products page</title>
+</head>
+
+<body>
+
+  <h1>All Ithemes</h1>
+  <div class="filters"><a class="filter_link" style="background: #3faaf5;" href="#" data-filter="all">All</a><a class="filter_link" href="#" data-filter="vegetables">Vegetables</a><a class="filter_link" style="background: #fda729;" href="#" data-filter="fruits">Fruits</a></div>
+
+<!--Changing the number in the column_# class changes the number of columns-->
+<body>
+	<div id="wrap">
+
+        {% for d in data %}
+
+
+
+	<div id="columns" class="columns_4">
+  <figure>
+  <img src="https://i.imgur.com/ruU04I6.jpg">
+	<figcaption>{{ d.title }}</figcaption>
+    <span class="price">${{ d.price }}</span>
+    <a class="button" href="#">Buy Now</a>
+	</figure>
+
+        {% endfor %}
+
+</div>
+
+</body>
+    <script rel="stylesheet" src="{% static "product/js.js" %}"></script>
+</body>
+
+</html>
+</body>
+</html>

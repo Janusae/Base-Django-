@@ -1,22 +1,31 @@
 {% extends "base.html" %}
+{% block header %}
+{% load static %}
+
+    <link rel="stylesheet" href="{% static "home/paste.css" %}">
+        <link rel="stylesheet" href="{% static "home/css3.css" %}">
+    <link rel="stylesheet" href="{% static "home/just.css" %}">
+
+{% endblock %}
 {% block content %}
-{% for d in data %}
+    	<div id="wrap">
 
+	<div id="columns" class="columns_4">
+    <br>
+    {% for d in data %}
+        <div class="summary">
+      <ul style="float: left ; margin-right: 10px">
+        <li class="total"><img class="img" src="static/images/{{ d.link_img }}" </li>
+        <li>Title :  <span>{{ d.title  }}</span></li>
+        <li v-if="discount > 0">name <span>{{ d.name  }}</span></li>
+        <li>Price <span>{{ d.price  }}</span></li>
 
-                                                       <div class="col-lg-4 col-sm-4">
-                              <div class="box_main">
-                                 <h4 class="shirt_text">{{ d.title }}</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ {{ d.price }}</span></p>
-                                 <div class="tshirt_img"><img src="static/images/{{ d.link_img }}"></div>
-                                 <div class="btn_main">
-                                    <div class="buy_bt"><a href="{{ d.slug }}">Buy Now</a></div>
-                                    <div class="seemore_bt"><a href="{{ d.slug }}">See More</a></div>
-                                 </div>
-                              </div>
-                           </div>
+      </ul>
+    </div>
+        <br>
+        <br>
+        <br>
+    {% endfor %}
 
-
-
-{% endfor %}
 
 {% endblock %}
