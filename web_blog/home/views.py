@@ -4,6 +4,11 @@ from django.urls import reverse
 from django.http import HttpResponse
 show = Product.objects.all()
 # Create your views here.
+def detail(request , slug):
+    check = get_object_or_404(Product , slug=slug)
+    return render(request , "home/detail.html" , {
+        "data" : check
+    })
 def home(request):
     return render(request , "home/home.html" , {
         "data" : show

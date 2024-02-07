@@ -33,7 +33,7 @@
   <img class="img" src="static/images/{{ d.link_img }}">
 	<figcaption>{{ d.title }}</figcaption>
     <span class="price">${{ d.price }}</span>
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="{{ d.slug }}">Buy Now</a>
 	</figure>
 
         {% endfor %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+    <link rel="stylesheet" href="{% static "home/detail.css"%}">
+</head>
+<body>
+<section class="content">
+  <article class="demo-area">
+  <img class="demo-trigger" src="static/images/{{ data.link_img }}" data-zoom="https://demos.imgix.net/wristwatch.jpg?w=1000&ch=DPR&dpr=2">
+  <div class="detail">
+   <section>
+      <h3>{{ data.title }}</h3>
+      <p> اطلاعات  : </p>
+      <ul>
+        <li>{{ data.name }}</li>
+        <li>{{ data.description }}</li>
+      </ul>
+      <h4>${{ data.price }} <button>اضافه کردن به سبد</button></h4>
+    </section>
+  </div>
+  </article>
+</section>
+<section class="content">
+  <article>
+         <script src="{% static "home/java.js" %}"></script>
+     <div class="button-group">
+       <a href="https://github.com/imgix/luminous" class="button" target="_blank">View on github</a>
+       <a href="https://imgix.com" target="_blank" class="button">Visit imgix.com</a>
+    </div>
+  </article>
+</section>
+<footer>
+  <hr>
+<a href="https://imgix.com"><img src="https://assets.imgix.net/presskit/imgix-presskit.pdf?page=3&fm=png&w=320&dpr=2" width="160" height="60"></a>
+</footer>
+</body>
+</html>
